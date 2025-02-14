@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
-
 * {
     margin: 0;
     padding: 0;
@@ -11,25 +10,21 @@ body {
     font-family: 'Acme', sans-serif;
 }
 
-/* Background Utama */
 .container-primary {
     background: linear-gradient(black, #38073b);
 }
 
-/* Parallax Section */
 .paralax {
     position: relative;
     width: 100%;
-    height: 100vh;
-    padding: 200px 5%;
+    height: 200vh;
+    padding: 300px 10%;
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    text-align: center;
 }
 
-/* Efek bayangan bawah */
 .paralax::before {
     content: " ";
     position: absolute;
@@ -40,7 +35,6 @@ body {
     z-index: 1000;
 }
 
-/* Gambar latar belakang */
 .paralax img {
     position: absolute;
     top: 0;
@@ -50,17 +44,24 @@ body {
     object-fit: cover;
 }
 
-/* Teks utama */
 #text {
     position: absolute;
-    font-size: 4vw;
+    font-size: 4.8em;
     color: white;
     letter-spacing: 2px;
+    text-align: center;
     text-shadow: 3px 3px 10px grey;
-    bottom: -50px;
+    bottom: -100px;
 }
 
-/* Tombol utama */
+.paralax img#meteorid {
+    z-index: 100;
+}
+
+.paralax img#dudububu {
+    z-index: 1000;
+}
+
 #button {
     position: absolute;
     font-size: 1em;
@@ -70,64 +71,65 @@ body {
     border-radius: 20px;
     text-decoration: none;
     transform: translateY(100px);
-    bottom: -50px;
+    bottom: -100px;
 }
 
-/* Deskripsi */
 .description {
     position: relative;
-    padding: 5em 5%;
+    padding: 10em;
     background-color: #c4c2c3;
-    text-align: justify;
 }
 
+
 .description p {
-    font-size: 1em;
+    font-size: 1.1em;
 }
 
 /* Responsiveness */
 @media screen and (max-width: 768px) {
     .paralax {
-        height: 80vh;
-        padding: 100px 5%;
+        height: 150vh;
+        padding: 150px 5%;
     }
     #text {
-        font-size: 3vw;
-        bottom: -30px;
+        font-size: 2.5em;
+        bottom: -50px;
     }
     #button {
         font-size: 0.9em;
         padding: 8px 30px;
-        bottom: -30px;
+        bottom: -50px;
     }
     .description {
-        padding: 4em 2em;
+        padding: 5em 2em;
+    }
+    .description p {
+        font-size: 1em;
     }
 }
 
 @media screen and (max-width: 480px) {
     .paralax {
-        height: 70vh;
-        padding: 50px 3%;
+        height: 120vh;
+        padding: 100px 3%;
     }
     #text {
-        font-size: 2.5vw;
-        bottom: -20px;
+        font-size: 2em;
+        bottom: -30px;
     }
     #button {
         font-size: 0.8em;
         padding: 6px 20px;
-        bottom: -20px;
+        bottom: -30px;
     }
     .description {
-        padding: 3em 1.5em;
+        padding: 4em 1.5em;
     }
     .description p {
         font-size: 0.9em;
     }
 }
 
-/* Background Galaxy */
 .background-galaxy {
     position: fixed;
     top: 0;
@@ -138,9 +140,10 @@ body {
     background-position: center;
     z-index: -1;
     filter: blur(5px);
+
+
 }
 
-/* Tombol Default */
 .none {
     text-decoration: none;
     background-color: grey;
@@ -154,44 +157,128 @@ body {
     color: black;
 }
 
-/* Konten */
+/* UNTUK AKIYA STYLE */
 .konten-1 {
     display: flex;
-    flex-wrap: wrap;
-    margin: 15px;
+    margin: 15px ;
     background-color: rgba(66, 66, 66, 0.6);
-    padding: 10px;
+    padding : 10px;
     border-radius: 8px;
 }
 
+
+.background-foto-1 {
+    background-color: rgba(66, 66, 66, 1);
+    padding : px;
+    border-radius: 8px;
+}
 .text-1 {
     margin-left: 15px;
 }
 
-/* Konten Gambar */
-.foto-1, .foto-2, .foto-3 {
+.isi-flex {
+    background-color: rgba(66, 66, 66, 0.7);
+    padding: 10px;
     width: 100%;
-    max-width: 400px;
+    height: 100vh;
+}
+
+.maaf-ini-seharusnya {
+    display: flex;
+}
+
+
+.konten-tiruan-1{
+    background-image: url(galaxy.png);
+}
+
+
+
+.p-2 {
+    font-family: 'Open Sans', sans-serif;
+    margin-top: 10px;
+    font-size: 15px;
+}
+
+.heading-1 {
+    font-size: 30px;
+    font-weight: bold;
+    
+}
+
+.foto-1 {
+    width: 400px;
     border-radius: 15px;
     object-fit: cover;
 }
 
-/* Overlay Text */
-.text-overlay, .text-overlay-2, .text-overlay-3 {
+.text-overlay {
+    margin-left: 10px;
     color: #eaeaea;
-    margin: 10px;
 }
 
-/* Kartu */
+.buttonnya {
+    background-color: grey;
+    padding: 5px;
+    border-radius: 8px;
+}
+
+.buttonnya:hover {
+    background-color: rgb(53, 53, 53);
+    color: white;
+    transform: translateY(5px);
+}
+
+.foto-2 {
+    width: 400px;
+    border-radius: 15px;
+    object-fit: cover;
+    align-self: flex-en;
+}
+
+.maaf-ini-seharusnya-2 {
+    display: flex;
+    flex-direction: row-reverse;
+    margin-top: 10px;
+}
+
+.text-overlay-2 {
+    margin-right: 10px;
+    color: #eaeaea;
+}
+
+.maaf-ini-seharusnya-3 {
+    display: flex;
+    margin-top: 10px;
+    flex-direction: row;
+}
+
+.text-overlay-3 {
+    margin-left: 10px;
+    color: #eaeaea;
+}
+
+.foto-3 {
+    width: 400px;
+    border-radius: 15px;
+    object-fit: cover;
+    align-self: flex-en;
+}
+
+.foto-4 {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
 .kartu {
-    width: 90%;
-    max-width: 300px;
+    width: 300px;
     background: #fff;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     overflow: hidden;
     text-align: center;
-    margin: 20px auto;
+    margin: 20px;
 }
 
 .card-overlay {
@@ -207,46 +294,21 @@ body {
     font-size: 14px;
     color: #666;
     font-family: 'Open Sans', sans-serif;
+
 }
 
-/* Pesan */
+.isi-kartu {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+
 .pesan {
     color: white;
     font-family: 'Times New Roman', Times, serif;
     text-align: justify;
-    padding: 10px;
 }
 
-/* Hover Button */
-.buttonnya {
-    background-color: grey;
-    padding: 5px;
-    border-radius: 8px;
-    transition: 0.3s;
-}
-
-.buttonnya:hover {
-    background-color: rgb(53, 53, 53);
-    color: white;
-    transform: translateY(5px);
-}
-
-/* Perbaikan untuk Layout di HP */
-@media screen and (max-width: 768px) {
-    .konten-1 {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .maaf-ini-seharusnya,
-    .maaf-ini-seharusnya-2,
-    .maaf-ini-seharusnya-3 {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    .foto-1, .foto-2, .foto-3 {
-        max-width: 90%;
-    }
+.pesan p {
+    margin-top: 10px;
 }
